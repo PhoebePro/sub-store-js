@@ -245,19 +245,19 @@
     {
       "tag": "🇭🇰 HK",
       "type": "urltest",
-      "url": "http://www.gstatic.com/generate_204",
+      "url": "http://captive.apple.com",
       "outbounds": []
     },
     {
       "type": "urltest",
       "tag": "🇨🇳 TW",
-      "url": "http://www.gstatic.com/generate_204",
+      "url": "http://captive.apple.com",
       "outbounds": []
     },
     {
       "type": "urltest",
       "tag": "🇯🇵 JP",
-      "url": "http://www.gstatic.com/generate_204",
+      "url": "http://captive.apple.com",
       "outbounds": []
     },
     {
@@ -268,7 +268,7 @@
     {
       "type": "urltest",
       "tag": "🇺🇸 US",
-      "url": "http://www.gstatic.com/generate_204",
+      "url": "http://captive.apple.com",
       "outbounds": []
     },
     {
