@@ -29,7 +29,8 @@
             },
             {
                 "tag": "dns_direct",
-                "address": "local"
+                "address": "dhcp://auto",
+                "detour": "Direct"
             },
             {
                 "tag": "block",
