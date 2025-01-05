@@ -17,22 +17,22 @@ config.outbounds.push(...proxies)
 
 config.outbounds.map(i => {
   if (['👉 Select'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies))
+    i.outbounds.push(...getTags(proxies, /^(?!.*ACA).*$/))
   }
   if (['🇭🇰 HK'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /^(?=.*(香港|hk|hongkong|kong kong))(?!.*ACA).*$/i))
+    i.outbounds.push(...getTags(proxies, /^(?=.*(香港|hk|hongkong|kong kong|Hong Kong))(?!.*ACA).*$/i))
   }
   if (['🇨🇳 TW'].includes(i.tag)) {   
-    i.outbounds.push(...getTags(proxies, /^(?=.*(台湾|tw|taiwan|🇹🇼))(?!.*ACA).*$/i))
+    i.outbounds.push(...getTags(proxies, /^(?=.*(台湾|tw|taiwan|Taiwan))(?!.*ACA).*$/i))
   }
   if (['🇯🇵 JP'].includes(i.tag)) {  
-    i.outbounds.push(...getTags(proxies, /^(?=.*(日本|jp|japan))(?!.*ACA).*$/i))
+    i.outbounds.push(...getTags(proxies, /^(?=.*(日本|jp|japan|Japan))(?!.*ACA).*$/i))
   }
   if (['🇸🇬 SG'].includes(i.tag)) { 
-    i.outbounds.push(...getTags(proxies, /^(?=.*(新|sg|singapore))(?!.*ACA).*$/i))
+    i.outbounds.push(...getTags(proxies, /^(?=.*(新|sg|singapore|Singapore))(?!.*ACA).*$/i))
   }
   if (['🇺🇸 US'].includes(i.tag)) { 
-    i.outbounds.push(...getTags(proxies, /^(?=.*(美国|us|unitedstates|united states))(?!.*ACA).*$/i))
+    i.outbounds.push(...getTags(proxies, /^(?=.*(美国|us|unitedstates|united states|United States))(?!.*ACA).*$/i))
   }
   if (['Emby'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /ACA/))
