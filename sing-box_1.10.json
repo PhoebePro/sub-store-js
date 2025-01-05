@@ -29,8 +29,7 @@
             },
             {
                 "tag": "dns_direct",
-                "address": "local",
-                "detour": "Direct"
+                "address": "local"
             },
             {
                 "tag": "block",
