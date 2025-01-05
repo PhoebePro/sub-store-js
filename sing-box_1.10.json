@@ -222,27 +222,15 @@
         "Direct",
         "🇺🇸 SS",
         "🇺🇸 HY",
-        "{ACA}"
       ],
-      "filter": [
-        {
-          "action": "exclude",
-          "keywords": [
-            "剩余|距离|到期|HA"
-          ]
-        }
-      ],
-      "default": "🇺🇸 SS"
+      "default": "🇺🇸 HY"
     },
     {
       "type": "selector",
       "tag": "👉 Select",
       "outbounds": [
         "🇺🇸 SS",
-        "🇺🇸 HY",
-        "{MESL}",
-        "{IFUN}",
-        "{TKV}"
+        "🇺🇸 HY"
       ]
     },
     {
@@ -258,95 +246,30 @@
       "tag": "🇭🇰 HK",
       "type": "urltest",
       "url": "http://www.gstatic.com/generate_204",
-      "outbounds": [
-        "{MESL}",
-        "{IFUN}",
-        "{TKV}"
-      ],
-      "filter": [
-        {
-          "action": "include",
-          "keywords": [
-            "🇭🇰|HK|hk|香港|港|HongKong"
-          ]
-        }
-      ]
+      "outbounds": []
     },
     {
       "type": "urltest",
       "tag": "🇨🇳 TW",
       "url": "http://www.gstatic.com/generate_204",
-      "outbounds": [
-        "{MESL}",
-        "{IFUN}",
-        "{TKV}"
-      ],
-      "filter": [
-        {
-          "action": "include",
-          "keywords": [
-            "🇨🇳|台湾|TW|TAIWAN|Taiwan"
-          ]
-        }
-      ]
+      "outbounds": []
     },
     {
       "type": "urltest",
       "tag": "🇯🇵 JP",
       "url": "http://www.gstatic.com/generate_204",
-      "outbounds": [
-        "{MESL}",
-        "{IFUN}",
-        "{TKV}"
-      ],
-      "filter": [
-        {
-          "action": "include",
-          "keywords": [
-            "🇯🇵|日本|JP|JAPAN|Japan"
-          ]
-        }
-      ]
+      "outbounds": []
     },
     {
       "type": "urltest",
       "tag": "🇸🇬 SG",
-      "outbounds": [
-        "{MESL}",
-        "{IFUN}"
-      ],
-      "filter": [
-        {
-          "action": "include",
-          "keywords": [
-            "🇸🇬|新加坡|SG|SINGAPORE|Singapore"
-          ]
-        }
-      ]
+      "outbounds": []
     },
     {
       "type": "urltest",
       "tag": "🇺🇸 US",
       "url": "http://www.gstatic.com/generate_204",
-      "outbounds": [
-        "{MESL}",
-        "{IFUN}",
-        "{TKV}"
-      ],
-      "filter": [
-        {
-          "action": "include",
-          "keywords": [
-            "🇺🇸|美国|US|UNITED STATES|United States"
-          ]
-        },
-        {
-          "action": "exclude",
-          "keywords": [
-            "Austria|Russia"
-          ]
-        }
-      ]
+      "outbounds": []
     },
     {
       "type": "shadowsocks",
