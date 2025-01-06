@@ -235,19 +235,13 @@
             "type": "selector",
             "tag": "Emby",
             "outbounds": [
-                "Direct",
-                "🇺🇸 SS",
-                "🇺🇸 HY"
-            ],
-            "default": "🇺🇸 HY"
+                "Direct"
+            ]
         },
         {
             "type": "selector",
             "tag": "👉 Select",
-            "outbounds": [
-                "🇺🇸 SS",
-                "🇺🇸 HY"
-            ]
+            "outbounds": []
         },
         {
             "tag": "Microsoft",
@@ -286,32 +280,6 @@
             "tag": "🇺🇸 US",
             "url": "http://captive.apple.com",
             "outbounds": []
-        },
-        {
-            "type": "shadowsocks",
-            "tag": "🇺🇸 SS",
-            "server": "107.174.253.125",
-            "server_port": 43579,
-            "method": "2022-blake3-aes-128-gcm",
-            "password": "qc925PAN3VPpLOtZo0aC1Q==",
-            "multiplex": {
-                "enabled": true,
-                "padding": true
-            }
-        },
-        {
-            "type": "hysteria2",
-            "tag": "🇺🇸 HY",
-            "server": "107.174.253.125",
-            "server_port": 8443,
-            "up_mbps": 30,
-            "down_mbps": 150,
-            "password": "pearce123",
-            "tls": {
-                "enabled": true,
-                "server_name": "bing.com",
-                "insecure": true
-            }
         },
         {
             "type": "direct",
