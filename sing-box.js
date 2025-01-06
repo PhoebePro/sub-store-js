@@ -32,7 +32,7 @@ config.outbounds.map(i => {
     i.outbounds.push(...getTags(proxies, /^(?=.*(新|sg|singapore|Singapore))(?!.*ACA).*$/i))
   }
   if (['🇺🇸 US'].includes(i.tag)) { 
-    i.outbounds.push(...getTags(proxies, /^(?!.*(Austria|Russia|[ACA])).*(美国|US|United\s*States).*/i))
+    i.outbounds.push(...getTags(proxies, /^(?!.*(Austria|Russia|[ACA])).*(美国|US|United States).*/i))
   }
   if (['Emby'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /ACA/))
