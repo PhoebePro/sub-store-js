@@ -29,10 +29,10 @@ config.outbounds.map(i => {
     i.outbounds.push(...getTags(proxies, /^(?=.*(日本|jp|japan|Japan))(?!.*ACA).*$/i))
   }
   if (['🇸🇬 SG'].includes(i.tag)) { 
-    i.outbounds.push(...getTags(proxies, /^(?=.*(新|sg|singapore|Singapore))(?!.*ACA).*$/i))
+    i.outbounds.push(...getTags(proxies, /^(?=.*(新加坡|sg|singapore|Singapore))(?!.*ACA).*$/i))
   }
   if (['🇺🇸 US'].includes(i.tag)) {       
-    i.outbounds.push(...getTags(proxies, /^(?=.*(United States|美国|US))(?:(?!ACA).)*$/g))
+    i.outbounds.push(...getTags(proxies, /^(?=.*(美国|US|United States))(?!.*ACA).*$/i))
   }
   if (['Emby'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /ACA/))
