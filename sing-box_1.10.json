@@ -152,7 +152,7 @@
             }
         ],
         "strategy": "prefer_ipv4",
-        "disable_cache": true,
+        "disable_cache": false,
         "disable_expire": false,
         "independent_cache": false,
         "final": "dns_proxy"
