@@ -8,7 +8,7 @@
     "experimental": {
         "clash_api": {
             "external_controller": "0.0.0.0:9090",
-            "external_ui_download_url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
+            "external_ui_download_url": "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
             "secret": "1234qwer",
             "default_mode": "rule",
             "access_control_allow_origin": "https://board.zash.run.place",
@@ -110,8 +110,7 @@
                 "rule_set": [
                     "geosite-tencent",
                     "geosite-bilibili",
-                    "geosite-geolocation-cn",
-                    "geoip-cn"
+                    "geosite-geolocation-cn"
                 ],
                 "server": "dns_direct"
             },
@@ -134,17 +133,11 @@
                     "91.108.56.0/22"
                 ],
                 "rule_set": [
-                    "geoip-youtube",
-                    "geoip-google",
-                    "geoip-github",
-                    "geoip-twitter",
-                    "geoip-netflix",
-                    "geoip-openai",
+                    "geosite-twitter",
                     "geosite-youtube",
                     "geosite-netflix",
                     "geosite-geolocation-!cn",
                     "geosite-telegram",
-                    "geoip-telegram",
                     "geosite-openai",
                     "geosite-google",
                     "geosite-github"
@@ -311,8 +304,7 @@
                     "91.108.56.0/22"
                 ],
                 "rule_set": [
-                    "geosite-telegram",
-                    "geoip-telegram"
+                    "geosite-telegram"
                 ],
                 "outbound": "Telegram"
             },
@@ -327,14 +319,12 @@
             },
             {
                 "rule_set": [
-                    "geosite-openai",
-                    "geoip-openai"
+                    "geosite-openai"
                 ],
                 "outbound": "openai"
             },
             {
                 "rule_set": [
-                    "geoip-youtube",
                     "geosite-youtube"
                 ],
                 "outbound": "youtube"
@@ -354,10 +344,7 @@
                     },
                     {
                         "rule_set": [
-                            "geoip-google",
-                            "geoip-github",
-                            "geoip-twitter",
-                            "geoip-netflix",
+                            "geosite-twitter",
                             "geosite-google",
                             "geosite-github",
                             "geosite-netflix",
@@ -405,8 +392,7 @@
                         "rule_set": [
                             "geosite-tencent",
                             "geosite-bilibili",
-                            "geosite-geolocation-cn",
-                            "geoip-cn"
+                            "geosite-geolocation-cn"
                         ]
                     }
                 ],
@@ -416,117 +402,75 @@
         "rule_set": [
             {
                 "type": "remote",
-                "tag": "geoip-openai",
+                "tag": "geosite-twitter",
                 "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-ai.srs"
-            },
-            {
-                "type": "remote",
-                "tag": "geoip-youtube",
-                "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-yt.srs"
-            },
-            {
-                "type": "remote",
-                "tag": "geoip-cn",
-                "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-cn.srs"
-            },
-            {
-                "type": "remote",
-                "tag": "geoip-google",
-                "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-gg.srs"
-            },
-            {
-                "type": "remote",
-                "tag": "geoip-github",
-                "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-gh.srs"
-            },
-            {
-                "type": "remote",
-                "tag": "geoip-telegram",
-                "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-tg.srs"
-            },
-            {
-                "type": "remote",
-                "tag": "geoip-twitter",
-                "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-tw.srs"
-            },
-            {
-                "type": "remote",
-                "tag": "geoip-netflix",
-                "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-nf.srs"
+                "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Twitter/Twitter.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-geolocation-cn",
                 "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-cn.srs"
+                "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/China/China.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-geolocation-!cn",
                 "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-geolocation-!cn.srs"
+                "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Global/Global.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-google",
                 "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-google.srs"
+                "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Google/Google.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-github",
                 "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-github.srs"
+                "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/GitHub/GitHub.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-youtube",
                 "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-youtube.srs"
+                "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/YouTube/YouTube.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-openai",
                 "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-openai.srs"
+                "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/OpenAI/OpenAI.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-telegram",
                 "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-telegram.srs"
+                "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Telegram/Telegram.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-netflix",
                 "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-netflix.srs"
+                "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Netflix/Netflix.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-tencent",
                 "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-tencent.srs"
+                "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Tencent/Tencent.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-bilibili",
                 "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-bilibili.srs"
+                "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/BiliBili/BiliBili.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-dnsblock",
                 "format": "binary",
-                "url": "https://lingering-feather-5220.mafuliang.workers.dev/github.com/TG-Twilight/AWAvenue-Ads-Rule/raw/refs/heads/main/Filters/AWAvenue-Ads-Rule-Singbox.srs"
+                "url": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/raw/refs/heads/main/Filters/AWAvenue-Ads-Rule-Singbox.srs"
             }
         ],
         "final": "✈️ Proxy",
