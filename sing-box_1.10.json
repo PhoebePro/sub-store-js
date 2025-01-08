@@ -51,6 +51,13 @@
                 "server": "dns_proxy"
             },
             {
+                "rule_set": [
+                    "geosite-awavenue-ad",
+                    "geosite-adguard"
+                ],
+                 "server": "block"
+            },
+            {
                 "domain": [
                     "p2p.qq.com",
                     "p2ptun.qq.com",
@@ -461,6 +468,18 @@
                 "tag": "geosite-bilibili",
                 "format": "binary",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/BiliBili/BiliBili.srs"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-awavenue-ad",
+                "format": "source",
+                "url": "https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json"
+            }，
+            {
+                "type": "remote",
+                "tag": "geosite-adguard",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/AdGuardSDNSFilter/AdGuardSDNSFilter.srs"
             }
         ],
         "final": "✈️ Proxy",
