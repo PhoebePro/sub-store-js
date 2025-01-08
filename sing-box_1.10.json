@@ -8,12 +8,12 @@
     "experimental": {
         "clash_api": {
           "external_controller": "0.0.0.0:9090",
-          "access_control_allow_origin": [
-              "http://127.0.0.1",
-              "http://yacd.haishan.me"
-          ],
-  "access_control_allow_private_network": true
-},
+          "external_ui_download_url": "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
+          "secret": "1234qwer",
+          "default_mode": "rule",
+          "access_control_allow_origin": "https://board.zash.run.place",
+          "access_control_allow_private_network": true
+    },
         "cache_file": {
             "enabled": true,
             "store_rdrc": true
