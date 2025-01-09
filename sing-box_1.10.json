@@ -482,8 +482,8 @@
             {
                 "type": "remote",
                 "tag": "geosite-awavenue-ad",
-                "format": "source",
-                "url": "https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json"
+                "format": "binary",
+                "url": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/raw/refs/heads/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.srs"
             },
             {
                 "type": "remote",
