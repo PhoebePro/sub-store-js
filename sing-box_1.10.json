@@ -148,7 +148,7 @@
                 "server": "dns_proxy"
             }
         ],
-        "strategy": "prefer_ipv4",
+        "strategy": "ipv4_only",
         "disable_cache": false,
         "disable_expire": false,
         "independent_cache": false,
@@ -173,23 +173,20 @@
             "mtu": 1492,
             "interface_name": "tun.sing-box",
             "address": [
-              "172.18.0.1/30",
-              "fdfe:dcba:9876::1/126"
+              "172.18.0.1/30"
             ],
             "auto_route": true,
             "strict_route": true,
             "route_address": [
               "0.0.0.0/1",
-              "128.0.0.0/1",
-              "::/1",
-              "8000::/1"
+              "128.0.0.0/1"
             ],
             "route_exclude_address": [
-              "192.168.0.0/16",
-              "fc00::/7"
+              "192.168.0.0/16"
             ],
             "sniff": true,
-            "stack": "system"
+            "stack": "system",
+            "sniff_override_destination": false
         }
     ],
     "outbounds": [
