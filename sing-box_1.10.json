@@ -177,12 +177,6 @@
             ],
             "auto_route": true,
             "strict_route": true,
-            "route_address": [
-              "0.0.0.0/1",
-              "128.0.0.0/1",
-              "::/1",
-              "8000::/1"
-            ],
             "sniff": true,
             "stack": "system",
             "sniff_override_destination": false
