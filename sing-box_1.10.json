@@ -52,8 +52,7 @@
             },
             {
                 "rule_set": [
-                    "geosite-awavenue-ad",
-                    "geosite-adguard"
+                    "geosite-awavenue-ad"
                 ],
                  "server": "block"
             },
@@ -480,12 +479,6 @@
                 "tag": "geosite-awavenue-ad",
                 "format": "binary",
                 "url": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/raw/refs/heads/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.srs"
-            },
-            {
-                "type": "remote",
-                "tag": "geosite-adguard",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/AdGuardSDNSFilter/AdGuardSDNSFilter.srs"
             }
         ],
         "final": "✈️ Proxy",
