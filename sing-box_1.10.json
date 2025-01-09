@@ -183,10 +183,6 @@
               "::/1",
               "8000::/1"
             ],
-            "route_exclude_address": [
-              "192.168.0.0/16",
-              "fc00::/7"
-            ],
             "sniff": true,
             "stack": "system",
             "sniff_override_destination": false
