@@ -189,7 +189,8 @@
               "fc00::/7"
             ],
             "sniff": true,
-            "stack": "system"
+            "stack": "system",
+            "sniff_override_destination": false
         }
     ],
     "outbounds": [
