@@ -494,7 +494,6 @@
         ],
         "final": "✈️ Proxy",
         "find_process": true,
-        "auto_detect_interface": true,
-        "override_android_vpn": true
+        "auto_detect_interface": true
     }
 }
