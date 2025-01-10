@@ -190,7 +190,7 @@
             "sniff_override_destination": false,
             "platform": {
               "http_proxy": {
-              "enabled": false,
+              "enabled": true,
               "server": "127.0.0.1",
               "server_port": 8080
               }
