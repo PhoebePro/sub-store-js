@@ -23,13 +23,12 @@
         "servers": [
             {
                 "tag": "dns_proxy",
-                "address": "https:\/\/1.1.1.1\/dns-query",
-                "detour": "✈️ Proxy",
-                "client_subnet": "1.0.1.0"
+                "address": "1.1.1.1",
+                "detour": "✈️ Proxy"
             },
             {
                 "tag": "dns_direct",
-                "address": "https://120.53.53.53/dns-query",
+                "address": "114.114.114.114",
                 "detour": "Direct"
             },
             {
@@ -175,13 +174,6 @@
             "address": [
               "172.16.0.1/30"
             ],
-            "platform": {
-              "http_proxy": {
-                "enabled": true,
-                "server": "127.0.0.1",
-                "server_port": 8080
-              }
-            },
             "auto_route": true,
             "strict_route": true,
             "sniff": true,
