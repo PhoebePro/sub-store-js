@@ -187,14 +187,7 @@
             "strict_route": true,
             "sniff": true,
             "stack": "system",
-            "sniff_override_destination": false,
-            "platform": {
-              "http_proxy": {
-              "enabled": true,
-              "server": "127.0.0.1",
-              "server_port": 8080
-              }
-            }
+            "sniff_override_destination": false
         }
     ],
     "outbounds": [
