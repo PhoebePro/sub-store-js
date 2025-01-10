@@ -186,6 +186,10 @@
             "address": [
               "172.16.0.1/30"
             ],
+            "route_address": [
+              "0.0.0.0/1",
+              "128.0.0.0/1"
+            ],
             "auto_route": true,
             "strict_route": true,
             "sniff": true,
