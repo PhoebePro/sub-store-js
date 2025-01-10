@@ -23,13 +23,11 @@
         "servers": [
             {
                 "tag": "dns_proxy",
-                "address": "1.1.1.1",
-                "detour": "✈️ Proxy"
+                "address": "1.1.1.1"
             },
             {
                 "tag": "dns_direct",
-                "address": "114.114.114.114",
-                "detour": "Direct"
+                "address": "114.114.114.114"
             },
             {
                 "tag": "block",
