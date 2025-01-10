@@ -421,72 +421,84 @@
                 "type": "remote",
                 "tag": "geosite-twitter",
                 "format": "binary",
+                "download_detour": "Direct",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Twitter/Twitter.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-geolocation-cn",
                 "format": "binary",
+                "download_detour": "Direct",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/China/China.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-geolocation-!cn",
                 "format": "binary",
+                "download_detour": "Direct",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Global/Global.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-google",
                 "format": "binary",
+                "download_detour": "Direct",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Google/Google.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-github",
                 "format": "binary",
+                "download_detour": "Direct",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/GitHub/GitHub.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-youtube",
                 "format": "binary",
+                "download_detour": "Direct",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/YouTube/YouTube.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-openai",
                 "format": "binary",
+                "download_detour": "Direct",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/OpenAI/OpenAI.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-telegram",
                 "format": "binary",
+                "download_detour": "Direct",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Telegram/Telegram.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-netflix",
                 "format": "binary",
+                "download_detour": "Direct",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Netflix/Netflix.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-tencent",
                 "format": "binary",
+                "download_detour": "Direct",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/Tencent/Tencent.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-bilibili",
                 "format": "binary",
+                "download_detour": "Direct",
                 "url": "https://cdn.jsdelivr.net/gh/senshinya/singbox_ruleset@main/rule/BiliBili/BiliBili.srs"
             },
             {
                 "type": "remote",
                 "tag": "geosite-awavenue-ad",
                 "format": "binary",
+                "download_detour": "Direct",
                 "url": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/raw/refs/heads/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.srs"
             }
         ],
