@@ -147,7 +147,7 @@
                 "server": "dns_proxy"
             }
         ],
-        "strategy": "prefer_ipv4",
+        "strategy": "ipv4_only",
         "disable_cache": false,
         "disable_expire": false,
         "independent_cache": false,
@@ -162,9 +162,10 @@
     },
     "inbounds": [
         {
-            "type": "socks",
+            "type": "mixed",
             "listen": "::",
-            "listen_port": 7890
+            "listen_port": 7890,
+            "set_system_proxy": false
         },
         {
             "type": "tun",
@@ -172,9 +173,23 @@
             "mtu": 1492,
             "interface_name": "tun.sing-box",
             "address": [
-              "172.16.0.1/30",
-              "fd00::1/126"
+              "172.16.0.1/30"
             ],
+            "route_address": [
+              "0.0.0.0/1",
+              "128.0.0.0/1"
+            ],
+
+            "route_exclude_address": [
+              "192.168.0.0/16"
+            ],
+          "platform": {
+            "http_proxy": {
+              "enabled": true,
+              "server": "127.0.0.1",
+              "server_port": 2080
+            }
+          },
             "auto_route": true,
             "strict_route": true,
             "sniff": true,
