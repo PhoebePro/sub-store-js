@@ -25,11 +25,11 @@
                 "tag": "dns_proxy",
                 "address": "https:\/\/1.1.1.1\/dns-query",
                 "detour": "✈️ Proxy",
-                "client_subnet": "110.242.68.66"
+                "client_subnet": "1.0.1.0"
             },
             {
                 "tag": "dns_direct",
-                "address": "https:\/\/223.5.5.5\/dns-query",
+                "address": "https://120.53.53.53/dns-query",
                 "detour": "Direct"
             },
             {
@@ -175,14 +175,13 @@
             "address": [
               "172.16.0.1/30"
             ],
-            "route_address": [
-              "0.0.0.0/1",
-              "128.0.0.0/1"
-            ],
-
-            "route_exclude_address": [
-              "192.168.0.0/16"
-            ],
+            "platform": {
+              "http_proxy": {
+                "enabled": true,
+                "server": "127.0.0.1",
+                "server_port": 8080
+              }
+            },
             "auto_route": true,
             "strict_route": true,
             "sniff": true,
@@ -497,7 +496,6 @@
         ],
         "final": "✈️ Proxy",
         "find_process": true,
-        "auto_detect_interface": true,
-        "override_android_vpn": true
+        "auto_detect_interface": true
     }
 }
