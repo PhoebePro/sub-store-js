@@ -107,7 +107,8 @@
                     "bochk.com",
                     "interactivebrokers.com",
                     "epicgames.com",
-                    "loungekey.com"
+                    "loungekey.com",
+                    "afun.la"
                 ],
                 "ip_is_private": true,
                 "rule_set": [
@@ -406,7 +407,8 @@
                             "bochk.com",
                             "interactivebrokers.com",
                             "epicgames.com",
-                            "loungekey.com"
+                            "loungekey.com",
+                            "afun.la"
                         ]
                     },
                     {
