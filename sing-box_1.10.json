@@ -274,30 +274,31 @@
         {
             "tag": "🇭🇰 HK",
             "type": "urltest",
-            "url": "http://captive.apple.com",
+            "url": "http://www.apple.com/library/test/success.html",
             "outbounds": []
         },
         {
             "type": "urltest",
             "tag": "🇨🇳 TW",
-            "url": "http://captive.apple.com",
+            "url": "http://www.apple.com/library/test/success.html",
             "outbounds": []
         },
         {
             "type": "urltest",
             "tag": "🇯🇵 JP",
-            "url": "http://captive.apple.com",
+            "url": "http://www.apple.com/library/test/success.html",
             "outbounds": []
         },
         {
             "type": "urltest",
             "tag": "🇸🇬 SG",
+            "url": "http://www.apple.com/library/test/success.html",
             "outbounds": []
         },
         {
             "type": "urltest",
             "tag": "🇺🇸 US",
-            "url": "http://captive.apple.com",
+            "url": "http://www.apple.com/library/test/success.html",
             "outbounds": []
         },
         {
