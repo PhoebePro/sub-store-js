@@ -35,7 +35,7 @@ config.outbounds.map(i => {
     i.outbounds.push(...getTags(proxies, /^(?=.*(美国|us|united states|United States))(?!.*(Austria|Russia)).*$/i))
   }
   if (['Emby'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /TKV/))
+    i.outbounds.push(...getTags(proxies))
   }
 })
 
