@@ -269,31 +269,41 @@
         {
             "tag": "🇭🇰 HK",
             "type": "urltest",
-            "url": "http://www.apple.com/library/test/success.html",
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": "1m",
+            "tolerance": 10,
             "outbounds": []
         },
         {
             "type": "urltest",
             "tag": "🇨🇳 TW",
-            "url": "http://www.apple.com/library/test/success.html",
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": "1m",
+            "tolerance": 10,
             "outbounds": []
         },
         {
             "type": "urltest",
             "tag": "🇯🇵 JP",
-            "url": "http://www.apple.com/library/test/success.html",
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": "1m",
+            "tolerance": 10,
             "outbounds": []
         },
         {
             "type": "urltest",
             "tag": "🇸🇬 SG",
-            "url": "http://www.apple.com/library/test/success.html",
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": "1m",
+            "tolerance": 10,
             "outbounds": []
         },
         {
             "type": "urltest",
             "tag": "🇺🇸 US",
-            "url": "http://www.apple.com/library/test/success.html",
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": "1m",
+            "tolerance": 10,
             "outbounds": []
         },
         {
