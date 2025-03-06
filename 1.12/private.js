@@ -34,7 +34,7 @@ config.outbounds.map(i => {
   if (['🇺🇸 US'].includes(i.tag)) {       
     i.outbounds.push(...getTags(proxies, /^(?=.*(?:美国|us|united states|United States))(?!.*0\.20).*/i))
   }
-  if (['Emby'].includes(i.tag)) {
+  if (['emby'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /US|JP|United States|Japan/i))
   }
 })
