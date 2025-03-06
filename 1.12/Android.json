@@ -339,7 +339,7 @@
     {
       "tag": "emby",
       "type": "selector",
-      "outbounds": [],
+      "outbounds": []
     },
     {
       "tag": "👉 Select",
