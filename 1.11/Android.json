@@ -83,7 +83,11 @@
         "outbound": "direct"
       },
       {
-        "domain_suffix": "vercel.app",
+        "domain_suffix": [
+          "vercel.app",
+          "sntp.uk",
+          "ifconfig.me"
+        ],
         "action": "route",
         "outbound": "proxy"
       },
