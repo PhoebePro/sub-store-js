@@ -265,12 +265,12 @@
       "tag": "proxy",
       "type": "selector",
       "outbounds": [
-        "👉 Select",
         "🇺🇸 US",
         "🇯🇵 JP",
         "🇨🇳 TW",
         "🇭🇰 HK",
-        "🇸🇬 SG"
+        "🇸🇬 SG",
+        "Select"
       ],
       "default": "🇭🇰 HK"
     },
@@ -306,7 +306,7 @@
       "type": "selector",
       "outbounds": [
         "proxy",
-        "👉 Select",
+        "Select",
         "🇸🇬 SG"
       ],
       "default": "🇸🇬 SG"
@@ -343,7 +343,7 @@
       "outbounds": []
     },
     {
-      "tag": "👉 Select",
+      "tag": "Select",
       "type": "selector",
       "outbounds": []
     },
