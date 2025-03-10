@@ -74,7 +74,7 @@
       {
         "clash_mode": "Global",
         "action": "route",
-        "outbound": "GLOBAL"
+        "outbound": "proxy"
       },
       {
         "clash_mode": "Direct",
