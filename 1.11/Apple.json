@@ -83,6 +83,19 @@
         "outbound": "direct"
       },
       {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "port": 443
+          },
+          {
+            "protocol": "quic"
+          }
+        ],
+        "action": "reject"
+      },
+      {
         "domain_suffix": [
           "vercel.app",
           "sntp.uk",
