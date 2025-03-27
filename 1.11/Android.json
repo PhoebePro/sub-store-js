@@ -91,6 +91,10 @@
         "action": "reject"
       },
       {
+        "rule_set": "geosite-dnsblock",
+        "action": "reject"
+      },
+      {
         "clash_mode": "Direct",
         "action": "route",
         "outbound": "direct"
