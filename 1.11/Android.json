@@ -78,6 +78,19 @@
         "outbound": "proxy"
       },
       {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "port": 443
+          },
+          {
+            "protocol": "quic"
+          }
+        ],
+        "action": "reject"
+      },
+      {
         "clash_mode": "Direct",
         "action": "route",
         "outbound": "direct"
