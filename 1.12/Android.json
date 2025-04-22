@@ -285,6 +285,7 @@
       "type": "selector",
       "outbounds": [
         "proxy",
+        "Select",
         "🇺🇸 US",
         "🇯🇵 JP",
         "🇨🇳 TW",
@@ -334,11 +335,9 @@
       "tag": "openai",
       "type": "selector",
       "outbounds": [
-        "proxy",
+        "Select",
         "🇺🇸 US",
         "🇯🇵 JP",
-        "🇨🇳 TW",
-        "🇭🇰 HK",
         "🇸🇬 SG"
       ],
       "default": "🇺🇸 US"
