@@ -72,6 +72,10 @@
         "action": "hijack-dns"
       },
       {
+        "protocol": "quic",
+        "action": "reject"
+      },
+      {
         "ip_is_private": true,
         "action": "route",
         "outbound": "direct"
