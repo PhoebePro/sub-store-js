@@ -70,10 +70,6 @@
         "action": "hijack-dns"
       },
       {
-        "protocol": "quic",
-        "action": "reject"
-      },
-      {
         "ip_is_private": true,
         "action": "route",
         "outbound": "direct"
@@ -87,6 +83,10 @@
         "clash_mode": "Direct",
         "action": "route",
         "outbound": "direct"
+      },
+      {
+        "protocol": "quic",
+        "action": "reject"
       },
       {
         "rule_set": "geosite-dnsblock",
