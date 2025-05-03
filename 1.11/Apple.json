@@ -104,6 +104,7 @@
         "outbound": "proxy"
       },
       {
+        "domain_suffix": "recmata.net",
         "domain": [
           "emby-micax-ca-v2.mius.uk",
           "emby.cn2gias.uk",
