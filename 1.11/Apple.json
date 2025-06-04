@@ -44,8 +44,7 @@
           "AAAA"
         ],
         "action": "route",
-        "server": "fakeip",
-        "rewrite_ttl": 1
+        "server": "fakeip"
       },
       {
         "rule_set": "geosite-dnsblock",
