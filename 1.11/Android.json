@@ -79,10 +79,6 @@
         "outbound": "proxy"
       },
       {
-        "protocol": "quic",
-        "action": "reject"
-      },
-      {
         "rule_set": "geosite-dnsblock",
         "action": "reject"
       },
