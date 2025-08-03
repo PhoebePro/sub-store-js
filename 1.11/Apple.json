@@ -84,10 +84,6 @@
         "outbound": "direct"
       },
       {
-        "protocol": "quic",
-        "action": "reject"
-      },
-      {
         "rule_set": "geosite-dnsblock",
         "action": "reject"
       },
