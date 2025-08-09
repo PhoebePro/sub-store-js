@@ -111,7 +111,14 @@
         ],
         "action": "route",
         "outbound": "proxy"
-      },
+      },,
+      {
+        "domain": [
+          "cdn.lilyemby.my"
+        ],
+        "action": "route",
+        "outbound": "direct"
+      }
       {
         "domain": [
           "emby-micax-ca-v2.mius.uk",
