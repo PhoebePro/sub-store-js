@@ -11,12 +11,6 @@
         "tag": "dns_direct",
         "type": "https",
         "server": "223.5.5.5"
-      },
-      {
-        "tag": "fakeip",
-        "type": "fakeip",
-        "inet4_range": "198.18.0.0/15",
-        "inet6_range": "fc00::/18"
       }
     ],
     "rules": [
@@ -28,7 +22,7 @@
       {
         "clash_mode": "Global",
         "action": "route",
-        "server": "fakeip"
+        "server": "dns_proxy"
       },
       {
         "query_type": "HTTPS",
@@ -39,16 +33,12 @@
         "action": "reject"
       },
       {
-        "query_type": [
-          "A",
-          "AAAA"
+        "rule_set": [
+          "cn_domain",
+          "jd_domain",
+          "alibaba_domain",
+          "bilibili_domain"
         ],
-        "action": "route",
-        "server": "fakeip",
-        "rewrite_ttl": 1
-      },
-      {
-        "rule_set": "cn_domain",
         "action": "route",
         "server": "dns_direct"
       }
@@ -184,7 +174,6 @@
       },
       {
         "rule_set": [
-          "apple_ip",
           "apple_domain"
         ],
         "action": "route",
@@ -193,7 +182,10 @@
       {
         "rule_set": [
           "cn_ip",
-          "cn_domain"
+          "cn_domain",
+          "jd_domain",
+          "alibaba_domain",
+          "bilibili_domain"
         ],
         "action": "route",
         "outbound": "direct"
@@ -201,80 +193,94 @@
     ],
     "rule_set": [
       {
-        "tag": "apple_ip",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geoip/apple.srs",
-        "download_detour": "🇸🇬 SG"
-      },
-      {
         "tag": "apple_domain",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geosite/apple.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-apple.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "tag": "cn_ip",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/cn.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "tag": "cn_domain",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geosite/cn.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-cn.srs",
+        "download_detour": "🇸🇬 SG"
+      },
+      {
+        "tag": "bilibili_domain",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bilibili.srs",
+        "download_detour": "🇸🇬 SG"
+      },
+      {
+        "tag": "alibaba_domain",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-alibaba.srs",
+        "download_detour": "🇸🇬 SG"
+      },
+      {
+        "tag": "jd_domain",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-jd.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "tag": "google_ip",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geoip/google.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-gg.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "tag": "google_domain",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geosite/google.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "tag": "openai_domain",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/openai.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "tag": "proxy_domain",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/geolocation-!cn.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "tag": "telegram_ip",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geoip/telegram.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-tg.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "tag": "telegram_domain",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geosite/telegram.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-telegram.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "tag": "youtube_domain",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geosite/youtube.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
@@ -438,11 +444,10 @@
   "experimental": {
     "clash_api": {
       "external_controller": "0.0.0.0:9090",
-      "default_mode": "Rule"
+      "default_mode": "Enhanced"
     },
     "cache_file": {
-      "enabled": true,
-      "store_fakeip": true
+      "enabled": true
     }
   },
   "log": {
