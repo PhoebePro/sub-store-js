@@ -25,10 +25,6 @@
         "server": "dns_proxy"
       },
       {
-        "query_type": "HTTPS",
-        "action": "reject"
-      },
-      {
         "rule_set": "geosite-dnsblock",
         "action": "reject"
       },
