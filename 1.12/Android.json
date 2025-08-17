@@ -30,17 +30,28 @@
       },
       {
         "rule_set": [
-          "cn_domain",
+          "apple_domain",
+          "google_domain",
+          "openai_domain",
+          "proxy_domain",
+          "telegram_domain",
+          "youtube_domain"
+        ],
+        "action": "route",
+        "server": "dns_proxy"
+      },
+      {
+        "rule_set": [
           "jd_domain",
           "alibaba_domain",
-          "bilibili_domain"
+          "bilibili_domain",
+          "cn_domain"
         ],
         "action": "route",
         "server": "dns_direct"
       }
     ],
     "final": "dns_proxy",
-    "strategy": "ipv4_only",
     "independent_cache": true
   },
   "route": {
@@ -117,6 +128,17 @@
         "outbound": "emby"
       },
       {
+        "rule_set": [
+          "cn_ip",
+          "cn_domain",
+          "jd_domain",
+          "alibaba_domain",
+          "bilibili_domain"
+        ],
+        "action": "route",
+        "outbound": "direct"
+      },
+      {
         "rule_set": "youtube_domain",
         "action": "route",
         "outbound": "youtube"
@@ -175,17 +197,6 @@
         ],
         "action": "route",
         "outbound": "apple"
-      },
-      {
-        "rule_set": [
-          "cn_ip",
-          "cn_domain",
-          "jd_domain",
-          "alibaba_domain",
-          "bilibili_domain"
-        ],
-        "action": "route",
-        "outbound": "direct"
       }
     ],
     "rule_set": [
