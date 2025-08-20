@@ -35,7 +35,8 @@
           "openai_domain",
           "proxy_domain",
           "telegram_domain",
-          "youtube_domain"
+          "youtube_domain",
+          "github_domain"
         ],
         "action": "route",
         "server": "dns_proxy"
@@ -190,7 +191,8 @@
       {
         "rule_set": [
           "google_ip",
-          "google_domain"
+          "google_domain",
+          "github_domain"
         ],
         "action": "route",
         "outbound": "google"
