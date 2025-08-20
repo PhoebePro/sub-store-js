@@ -9,7 +9,7 @@
       },
       {
         "tag": "dns_direct",
-        "type": "udp",
+        "type": "https",
         "server": "223.5.5.5"
       }
     ],
@@ -43,6 +43,8 @@
       {
         "rule_set": [
           "jd_domain",
+          "bytedance_domain",
+          "bank-cn_domain",
           "alibaba_domain",
           "bilibili_domain",
           "cn_domain"
@@ -133,7 +135,9 @@
           "cn_domain",
           "jd_domain",
           "alibaba_domain",
-          "bilibili_domain"
+          "bilibili_domain",
+          "bytedance_domain",
+          "bank-cn_domain"
         ],
         "action": "route",
         "outbound": "direct"
@@ -243,6 +247,20 @@
         "download_detour": "🇸🇬 SG"
       },
       {
+        "tag": "bytedance_domain",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bytedance.srs",
+        "download_detour": "🇸🇬 SG"
+      },
+      {
+        "tag": "bank-cn_domain",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-bank-cn.srs",
+        "download_detour": "🇸🇬 SG"
+      },
+      {
         "tag": "google_ip",
         "type": "remote",
         "format": "binary",
@@ -254,6 +272,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs",
+        "download_detour": "🇸🇬 SG"
+      },
+      {
+        "tag": "github_domain",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-github.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
