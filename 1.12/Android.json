@@ -48,6 +48,7 @@
           "bank-cn_domain",
           "alibaba_domain",
           "bilibili_domain",
+          "tencent_domain",
           "cn_domain"
         ],
         "action": "route",
@@ -138,6 +139,7 @@
           "alibaba_domain",
           "bilibili_domain",
           "bytedance_domain",
+          "tencent_domain",
           "bank-cn_domain"
         ],
         "action": "route",
@@ -260,6 +262,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-bank-cn.srs",
+        "download_detour": "🇸🇬 SG"
+      },
+      {
+        "tag": "tencent_domain",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-tencent.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
