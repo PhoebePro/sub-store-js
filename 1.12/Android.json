@@ -360,7 +360,6 @@
       "outbounds": [
         "🇺🇸 US",
         "🇯🇵 JP",
-        "🇨🇳 TW",
         "🇭🇰 HK",
         "🇸🇬 SG",
         "Select"
@@ -373,7 +372,6 @@
       "outbounds": [
         "🇺🇸 US",
         "🇯🇵 JP",
-        "🇨🇳 TW",
         "🇭🇰 HK",
         "🇸🇬 SG",
         "Select"
@@ -406,7 +404,6 @@
       "outbounds": [
         "🇺🇸 US",
         "🇯🇵 JP",
-        "🇨🇳 TW",
         "🇭🇰 HK",
         "🇸🇬 SG",
         "Select"
@@ -419,7 +416,6 @@
       "outbounds": [
         "🇺🇸 US",
         "🇯🇵 JP",
-        "🇨🇳 TW",
         "🇭🇰 HK",
         "🇸🇬 SG",
         "Select"
@@ -439,42 +435,22 @@
     {
       "tag": "🇭🇰 HK",
       "type": "selector",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 10
-    },
-    {
-      "tag": "🇨🇳 TW",
-      "type": "selector",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 10
+      "outbounds": []
     },
     {
       "tag": "🇯🇵 JP",
       "type": "selector",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 10
+      "outbounds": []
     },
     {
       "tag": "🇸🇬 SG",
       "type": "selector",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 10
+      "outbounds": []
     },
     {
       "tag": "🇺🇸 US",
       "type": "selector",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 10
+      "outbounds": []
     },
     {
       "tag": "direct",
