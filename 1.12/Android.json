@@ -438,7 +438,7 @@
     },
     {
       "tag": "🇭🇰 HK",
-      "type": "urltest",
+      "type": "selector",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
@@ -446,7 +446,7 @@
     },
     {
       "tag": "🇨🇳 TW",
-      "type": "urltest",
+      "type": "selector",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
@@ -454,7 +454,7 @@
     },
     {
       "tag": "🇯🇵 JP",
-      "type": "urltest",
+      "type": "selector",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
@@ -462,7 +462,7 @@
     },
     {
       "tag": "🇸🇬 SG",
-      "type": "urltest",
+      "type": "selector",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
@@ -470,7 +470,7 @@
     },
     {
       "tag": "🇺🇸 US",
-      "type": "urltest",
+      "type": "selector",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
