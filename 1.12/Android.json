@@ -349,7 +349,7 @@
         "🇸🇬 SG",
         "Select"
       ],
-      "default": "🇭🇰 HK"
+      "default": "🇯🇵 JP"
     },
     {
       "tag": "google",
@@ -361,7 +361,7 @@
         "🇸🇬 SG",
         "Select"
       ],
-      "default": "Select"
+      "default": "🇯🇵 JP"
     },
     {
       "tag": "apple",
@@ -393,7 +393,7 @@
         "🇸🇬 SG",
         "Select"
       ],
-      "default": "Select"
+      "default": "🇯🇵 JP"
     },
     {
       "tag": "openai",
