@@ -456,7 +456,7 @@
       "auto_route": true,
       "platform": {
         "http_proxy": {
-        "enabled": false,
+        "enabled": true,
         "server": "127.0.0.1",
         "server_port": 7890
     }
@@ -470,11 +470,14 @@
   "experimental": {
     "clash_api": {
       "external_controller": "0.0.0.0:9090",
+      "external_ui": "ui",
+      "secret": "",
+      "external_ui_download_url": "https://github.com/Zephyruso/zashboard/releases/latest/download/dist-pingfang-only.zip",
+      "external_ui_download_detour": "proxy",
       "default_mode": "Rule"
     },
     "cache_file": {
-      "enabled": true,
-      "store_fakeip": true
+      "enabled": true
     }
   },
   "log": {
