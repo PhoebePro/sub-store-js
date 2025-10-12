@@ -32,7 +32,7 @@ config.outbounds.map(i => {
     i.outbounds.push(...getTags(proxies, /^(?=.*(?:美国|us|united states|United States))(?!.*(SNTP|0\.2)).*/i))
   }
   if (['emby'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /US|JP|United States|Japan/i))
+    i.outbounds.push(...getTags(proxies, /US|JP|United States|Japan|日本/i))
   }
 })
 
