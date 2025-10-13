@@ -3,12 +3,12 @@
     "servers": [
       {
         "tag": "dns_proxy",
-        "address": "https://8.8.8.8/dns-query",
+        "address": "h3://1.1.1.1/dns-query",
         "detour": "proxy"
       },
       {
         "tag": "dns_direct",
-        "address": "https://223.5.5.5/dns-query",
+        "address": "quic://1.1.1.1",
         "detour": "direct"
       }
     ],
@@ -34,13 +34,33 @@
         "action": "reject"
       },
       {
-        "rule_set": "cn_domain",
+        "rule_set": [
+          "jd_domain",
+          "bytedance_domain",
+          "bank-cn_domain",
+          "alibaba_domain",
+          "bilibili_domain",
+          "tencent_domain",
+          "cn_domain"
+        ],
         "action": "route",
         "server": "dns_direct"
+      },
+      {
+        "rule_set": [
+          "apple_domain",
+          "google_domain",
+          "openai_domain",
+          "proxy_domain",
+          "telegram_domain",
+          "youtube_domain",
+          "github_domain"
+        ],
+        "action": "route",
+        "server": "dns_proxy"
       }
     ],
     "final": "dns_proxy",
-    "strategy": "ipv4_only",
     "independent_cache": true
   },
   "route": {
@@ -98,6 +118,13 @@
       },
       {
         "domain": [
+          "cdn.lilyemby.my"
+        ],
+        "action": "route",
+        "outbound": "direct"
+      },
+      {
+        "domain": [
           "emby-micax-ca-v2.mius.uk",
           "emby.cn2gias.uk",
           "emby.bangumi.ca",
@@ -105,7 +132,21 @@
         ],
         "action": "route",
         "outbound": "emby"
-      },      
+      },
+      {
+        "rule_set": [
+          "cn_ip",
+          "cn_domain",
+          "jd_domain",
+          "alibaba_domain",
+          "bilibili_domain",
+          "bytedance_domain",
+          "tencent_domain",
+          "bank-cn_domain"
+        ],
+        "action": "route",
+        "outbound": "direct"
+      },
       {
         "rule_set": "youtube_domain",
         "action": "route",
@@ -154,14 +195,14 @@
       {
         "rule_set": [
           "google_ip",
-          "google_domain"
+          "google_domain",
+          "github_domain"
         ],
         "action": "route",
         "outbound": "google"
       },
       {
         "rule_set": [
-          "apple_ip",
           "apple_domain"
         ],
         "action": "route",
@@ -178,87 +219,129 @@
     ],
     "rule_set": [
       {
-        "tag": "apple_ip",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geoip/apple.srs",
-        "download_detour": "🇸🇬 SG"
-      },
-      {
         "tag": "apple_domain",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geosite/apple.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-apple.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "tag": "cn_ip",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/cn.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "tag": "cn_domain",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geosite/cn.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-cn.srs",
+        "download_detour": "🇸🇬 SG"
+      },
+      {
+        "tag": "bilibili_domain",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bilibili.srs",
+        "download_detour": "🇸🇬 SG"
+      },
+      {
+        "tag": "alibaba_domain",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-alibaba.srs",
+        "download_detour": "🇸🇬 SG"
+      },
+      {
+        "tag": "jd_domain",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-jd.srs",
+        "download_detour": "🇸🇬 SG"
+      },
+      {
+        "tag": "bytedance_domain",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bytedance.srs",
+        "download_detour": "🇸🇬 SG"
+      },
+      {
+        "tag": "bank-cn_domain",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-bank-cn.srs",
+        "download_detour": "🇸🇬 SG"
+      },
+      {
+        "tag": "tencent_domain",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-tencent.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "tag": "google_ip",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geoip/google.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-gg.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "tag": "google_domain",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geosite/google.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs",
+        "download_detour": "🇸🇬 SG"
+      },
+      {
+        "tag": "github_domain",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-github.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "tag": "openai_domain",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/openai.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "tag": "proxy_domain",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/geolocation-!cn.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "tag": "telegram_ip",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geoip/telegram.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-tg.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "tag": "telegram_domain",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geosite/telegram.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-telegram.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "tag": "youtube_domain",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geosite/youtube.srs",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs",
         "download_detour": "🇸🇬 SG"
       },
       {
         "type": "remote",
         "tag": "geosite-dnsblock",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main//Filters/AWAvenue-Ads-Rule-Singbox.srs",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json",
         "download_detour": "🇸🇬 SG"
       }
     ],
@@ -272,7 +355,6 @@
       "outbounds": [
         "🇺🇸 US",
         "🇯🇵 JP",
-        "🇨🇳 TW",
         "🇭🇰 HK",
         "🇸🇬 SG",
         "Select"
@@ -285,12 +367,11 @@
       "outbounds": [
         "🇺🇸 US",
         "🇯🇵 JP",
-        "🇨🇳 TW",
         "🇭🇰 HK",
         "🇸🇬 SG",
         "Select"
       ],
-      "default": "Select"
+      "default": "🇭🇰 HK"
     },
     {
       "tag": "apple",
@@ -323,7 +404,7 @@
         "🇸🇬 SG",
         "Select"
       ],
-      "default": "Select"
+      "default": "🇯🇵 JP"
     },
     {
       "tag": "openai",
@@ -331,7 +412,6 @@
       "outbounds": [
         "🇺🇸 US",
         "🇯🇵 JP",
-        "🇨🇳 TW",
         "🇭🇰 HK",
         "🇸🇬 SG",
         "Select"
@@ -350,43 +430,23 @@
     },
     {
       "tag": "🇭🇰 HK",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 10
-    },
-    {
-      "tag": "🇨🇳 TW",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 10
+      "type": "selector",
+      "outbounds": []
     },
     {
       "tag": "🇯🇵 JP",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 10
+      "type": "selector",
+      "outbounds": []
     },
     {
       "tag": "🇸🇬 SG",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 10
+      "type": "selector",
+      "outbounds": []
     },
     {
       "tag": "🇺🇸 US",
-      "type": "urltest",
-      "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 10
+      "type": "selector",
+      "outbounds": []
     },
     {
       "tag": "direct",
@@ -403,7 +463,14 @@
         "192.168.0.0/16"
       ],
       "stack": "system",
-      "auto_route": true
+      "auto_route": true,
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 7890
+        }
+      }
     },
     {
       "type": "mixed",
@@ -414,6 +481,10 @@
   "experimental": {
     "clash_api": {
       "external_controller": "0.0.0.0:9090",
+      "external_ui": "ui",
+      "secret": "",
+      "external_ui_download_url": "https://github.com/Zephyruso/zashboard/releases/latest/download/dist-pingfang-only.zip",
+      "external_ui_download_detour": "proxy",
       "default_mode": "Rule"
     },
     "cache_file": {
