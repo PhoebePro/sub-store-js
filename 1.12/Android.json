@@ -11,12 +11,6 @@
         "tag": "dns_direct",
         "type": "udp",
         "server": "223.5.5.5"
-      },
-      {
-        "tag": "fakeip",
-        "type": "fakeip",
-        "inet4_range": "198.18.0.0/15",
-        "inet6_range": "fc00::/18"
       }
     ],
     "rules": [
@@ -28,27 +22,37 @@
       {
         "clash_mode": "Global",
         "action": "route",
-        "server": "fakeip"
+        "server": "dns_proxy"
       },
       {
         "rule_set": "geosite-dnsblock",
         "action": "reject"
       },
       {
-        "query_type": [
-          "A",
-          "AAAA"
-        ],
-        "action": "route",
-        "server": "fakeip",
-        "rewrite_ttl": 1
-      },
-      {
         "rule_set": [
+          "jd_domain",
+          "bytedance_domain",
+          "bank-cn_domain",
+          "alibaba_domain",
+          "bilibili_domain",
+          "tencent_domain",
           "cn_domain"
         ],
         "action": "route",
         "server": "dns_direct"
+      },
+      {
+        "rule_set": [
+          "apple_domain",
+          "google_domain",
+          "openai_domain",
+          "proxy_domain",
+          "telegram_domain",
+          "youtube_domain",
+          "github_domain"
+        ],
+        "action": "route",
+        "server": "dns_proxy"
       }
     ],
     "final": "dns_proxy",
