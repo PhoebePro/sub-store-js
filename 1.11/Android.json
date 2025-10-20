@@ -4,7 +4,7 @@
       {
         "tag": "dns_proxy",
         "address": "h3://1.1.1.1/dns-query",
-        "detour": ""🌐 Proxy"
+        "detour": "🌐 Proxy"
       },
       {
         "tag": "dns_direct",
