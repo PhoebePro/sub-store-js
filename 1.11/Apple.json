@@ -4,7 +4,7 @@
       {
         "tag": "dns_proxy",
         "address": "h3://1.1.1.1/dns-query",
-        "detour": "proxy"
+        "detour": ""🌐 Proxy"
       },
       {
         "tag": "dns_direct",
@@ -64,6 +64,9 @@
     "independent_cache": true
   },
   "route": {
+    "default_domain_resolver": {
+      "server": "dns_direct"
+    },
     "rules": [
       {
         "action": "sniff",
@@ -96,16 +99,16 @@
       {
         "clash_mode": "Global",
         "action": "route",
-        "outbound": "proxy"
-      },
-      {
-        "rule_set": "geosite-dnsblock",
-        "action": "reject"
+        "outbound": "🌐 Proxy"
       },
       {
         "clash_mode": "Direct",
         "action": "route",
         "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-dnsblock",
+        "action": "reject"
       },
       {
         "domain_suffix": [
@@ -114,7 +117,7 @@
           "ifconfig.me"
         ],
         "action": "route",
-        "outbound": "proxy"
+        "outbound": "🌐 Proxy"
       },
       {
         "domain": [
@@ -131,7 +134,7 @@
           "cf.lilyemby.my"
         ],
         "action": "route",
-        "outbound": "emby"
+        "outbound": "📽️ Emby"
       },
       {
         "rule_set": [
@@ -150,12 +153,12 @@
       {
         "rule_set": "youtube_domain",
         "action": "route",
-        "outbound": "youtube"
+        "outbound": "📹 Youtube"
       },
       {
         "rule_set": "openai_domain",
         "action": "route",
-        "outbound": "openai"
+        "outbound": "🤖 Openai"
       },
       {
         "type": "logical",
@@ -175,7 +178,7 @@
           }
         ],
         "action": "route",
-        "outbound": "proxy"
+        "outbound": "🌐 Proxy"
       },
       {
         "action": "resolve"
@@ -190,7 +193,7 @@
           "telegram_domain"
         ],
         "action": "route",
-        "outbound": "telegram"
+        "outbound": "✆ Telegram"
       },
       {
         "rule_set": [
@@ -199,22 +202,14 @@
           "github_domain"
         ],
         "action": "route",
-        "outbound": "google"
+        "outbound": "✈ Google"
       },
       {
         "rule_set": [
           "apple_domain"
         ],
         "action": "route",
-        "outbound": "apple"
-      },
-      {
-        "rule_set": [
-          "cn_ip",
-          "cn_domain"
-        ],
-        "action": "route",
-        "outbound": "direct"
+        "outbound": "🖥️ Apple"
       }
     ],
     "rule_set": [
@@ -345,85 +340,85 @@
         "download_detour": "🇸🇬 SG"
       }
     ],
-    "final": "proxy",
+    "final": "🌐 Proxy",
     "auto_detect_interface": true
   },
   "outbounds": [
     {
-      "tag": "proxy",
+      "tag": "🌐 Proxy",
       "type": "selector",
       "outbounds": [
         "🇺🇸 US",
         "🇯🇵 JP",
         "🇭🇰 HK",
         "🇸🇬 SG",
-        "Select"
+        "► Select"
       ],
-      "default": "🇭🇰 HK"
+      "default": "🇯🇵 JP"
     },
     {
-      "tag": "google",
+      "tag": "✈ Google",
       "type": "selector",
       "outbounds": [
         "🇺🇸 US",
         "🇯🇵 JP",
         "🇭🇰 HK",
         "🇸🇬 SG",
-        "Select"
+        "► Select"
       ],
-      "default": "🇭🇰 HK"
+      "default": "🇯🇵 JP"
     },
     {
-      "tag": "apple",
+      "tag": "🖥️ Apple",
       "type": "selector",
       "outbounds": [
         "🇺🇸 US",
         "🇭🇰 HK",
-        "Select",
+        "► Select",
         "direct"
       ],
       "default": "direct"
     },
     {
-      "tag": "telegram",
+      "tag": "✆ Telegram",
       "type": "selector",
       "outbounds": [
-        "Select",
+        "► Select",
         "🇸🇬 SG"
       ],
       "default": "🇸🇬 SG"
     },
     {
-      "tag": "youtube",
+      "tag": "📹 Youtube",
       "type": "selector",
       "outbounds": [
         "🇺🇸 US",
         "🇯🇵 JP",
         "🇭🇰 HK",
         "🇸🇬 SG",
-        "Select"
+        "► Select"
       ],
       "default": "🇯🇵 JP"
     },
     {
-      "tag": "openai",
+      "tag": "🤖 Openai",
       "type": "selector",
       "outbounds": [
         "🇺🇸 US",
         "🇯🇵 JP",
         "🇭🇰 HK",
         "🇸🇬 SG",
-        "Select"
+        "► Select"
       ],
       "default": "🇺🇸 US"
     },
     {
-      "tag": "emby",
+      "tag": "📽️ Emby",
       "type": "selector",
       "outbounds": []
     },
     {
-      "tag": "Select",
+      "tag": "► Select",
       "type": "selector",
       "outbounds": []
     },
@@ -483,7 +478,7 @@
       "external_ui": "ui",
       "secret": "",
       "external_ui_download_url": "https://github.com/Zephyruso/zashboard/releases/latest/download/dist-pingfang-only.zip",
-      "external_ui_download_detour": "proxy",
+      "external_ui_download_detour": "🌐 Proxy",
       "default_mode": "Rule"
     },
     "cache_file": {
