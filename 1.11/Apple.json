@@ -64,9 +64,6 @@
     "independent_cache": true
   },
   "route": {
-    "default_domain_resolver": {
-      "server": "dns_direct"
-    },
     "rules": [
       {
         "action": "sniff",
