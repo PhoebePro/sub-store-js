@@ -16,7 +16,7 @@ let proxies = await produceArtifact({
 config.outbounds.push(...proxies)
 
 config.outbounds.map(i => {
-  if (['Select'].includes(i.tag)) {
+  if (['► Select'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies))
   }
   if (['🇭🇰 HK'].includes(i.tag)) {      
