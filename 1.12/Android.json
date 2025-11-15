@@ -3,13 +3,13 @@
     "servers": [
       {
         "tag": "dns_proxy",
-        "type": "h3",
+        "type": "https",
         "server": "8.8.8.8",
         "detour": "🌐 Proxy"
       },
       {
         "tag": "dns_direct",
-        "type": "quic",
+        "type": "https",
         "server": "223.5.5.5"
       }
     ],
