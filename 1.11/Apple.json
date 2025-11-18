@@ -104,10 +104,6 @@
         "outbound": "direct"
       },
       {
-        "rule_set": "geosite-dnsblock",
-        "action": "reject"
-      },
-      {
         "domain_suffix": [
           "vercel.app",
           "sntp.uk",
